@@ -1,0 +1,26 @@
+{
+    "name": "kylebrowning/brew-tests",
+    "description": "Test brew tap/formula.",
+    "type": "library",
+    "require": {
+        "symfony/console": "^3.1",
+        "symfony/yaml": "^3.1",
+        "symfony/config": "^3.1",
+        "symfony/process": "^3.1"
+    },
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Kyle Browning",
+            "email": "kyle.browning@acquia.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "bin": [
+        "bin/brew-test"
+    ]
+}
