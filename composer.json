@@ -1,5 +1,5 @@
 {
-    "name": "kylebrowning/brew-tests",
+    "name": "kylebrowning/brew-test",
     "description": "Test brew tap/formula.",
     "type": "library",
     "require": {
@@ -18,9 +18,12 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": {"Drupal\\Console\\": "src"}
     },
     "bin": [
         "bin/brew-test"
-    ]
+    ],
+    "config": {
+        "bin-dir": "bin/"
+    }
 }

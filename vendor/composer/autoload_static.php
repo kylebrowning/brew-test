@@ -25,6 +25,10 @@ class ComposerStaticInitd46c610ce4f19b8e13ce47b94c104bb4
         array (
             'Psr\\Log\\' => 8,
         ),
+        'D' => 
+        array (
+            'Drupal\\Console\\' => 15,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -60,10 +64,10 @@ class ComposerStaticInitd46c610ce4f19b8e13ce47b94c104bb4
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-    );
-
-    public static $fallbackDirsPsr0 = array (
-        0 => __DIR__ . '/../..' . '/src',
+        'Drupal\\Console\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -71,7 +75,6 @@ class ComposerStaticInitd46c610ce4f19b8e13ce47b94c104bb4
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitd46c610ce4f19b8e13ce47b94c104bb4::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitd46c610ce4f19b8e13ce47b94c104bb4::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr0 = ComposerStaticInitd46c610ce4f19b8e13ce47b94c104bb4::$fallbackDirsPsr0;
 
         }, null, ClassLoader::class);
     }
